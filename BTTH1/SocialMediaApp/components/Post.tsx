@@ -1,3 +1,4 @@
+// 22521172 - Võ Nhất Phương
 import React, { useState } from 'react';
 import {
     View,
@@ -9,12 +10,28 @@ import {
 } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-const Post = ({ post, onUpdatePost }) => {
+interface PostProps {
+    post: {
+        id: number;
+        username: string;
+        avatar: any;
+        content: string;
+        image: any;
+        likes: number;
+        comments: number;
+        shares: number;
+        isLiked: boolean;
+    };
+    onUpdatePost: (postId: number, updates: any) => void;
+}
+
+const Post = ({ post, onUpdatePost }: PostProps) => {
     const [isLiked, setIsLiked] = useState(post.isLiked);
     const [likeCount, setLikeCount] = useState(post.likes);
     const [commentCount, setCommentCount] = useState(post.comments);
     const [shareCount, setShareCount] = useState(post.shares);
 
+    // 22521172 - Võ Nhất Phương
     const handleLike = () => {
         if (isLiked) {
             setIsLiked(false);
@@ -50,6 +67,7 @@ const Post = ({ post, onUpdatePost }) => {
 
             <Image source={post.image} style={styles.postImage} />
 
+            {/* 22521172 - Võ Nhất Phương */}
             <View style={styles.statsContainer}>
                 <Text style={styles.statsText}>{likeCount} Likes</Text>
                 <Text style={styles.statsText}>{commentCount} Comments</Text>
@@ -60,7 +78,7 @@ const Post = ({ post, onUpdatePost }) => {
 
             <View style={styles.actionsContainer}>
                 <Pressable
-                    style={[styles.actionButton, isLiked && styles.likedButton]}
+                    style={styles.actionButton}
                     onPress={handleLike}
                 >
                     <FontAwesome
@@ -88,6 +106,7 @@ const Post = ({ post, onUpdatePost }) => {
                         size={18}
                         style={[styles.icon, styles.iconDefault]}
                     />
+                    {/* 22521172 - Võ Nhất Phương */}
                     <Text style={styles.actionButtonText}>Shares</Text>
                 </Pressable>
             </View>
@@ -122,6 +141,7 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         marginRight: 12,
     },
+    // 22521172 - Võ Nhất Phương
     username: {
         fontSize: 16,
         fontWeight: 'bold',
@@ -159,6 +179,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#e0e0e0',
         marginVertical: 8,
     },
+    // 22521172 - Võ Nhất Phương
     actionsContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
@@ -174,7 +195,6 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         marginHorizontal: 4,
     },
-
     icon: {
         marginRight: 6,
     },

@@ -1,3 +1,4 @@
+// 22521172 - Võ Nhất Phương
 import React, { useState } from 'react';
 import {
     View,
@@ -12,7 +13,7 @@ import { postsData } from '../data/posts';
 const PostList = () => {
     const [posts, setPosts] = useState(postsData);
 
-    const handleUpdatePost = (postId, updates) => {
+    const handleUpdatePost = (postId: number, updates: any) => {
         setPosts(prevPosts =>
             prevPosts.map(post =>
                 post.id === postId ? { ...post, ...updates } : post
@@ -27,6 +28,7 @@ const PostList = () => {
             </View>
 
             <ScrollView
+                // 22521172 - Võ Nhất Phương
                 style={styles.scrollView}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={styles.scrollContent}
@@ -54,6 +56,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         alignItems: 'center',
     },
+    // 22521172 - Võ Nhất Phương
     headerTitle: {
         fontSize: 20,
         fontWeight: 'bold',
