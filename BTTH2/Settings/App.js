@@ -1,6 +1,6 @@
 // 22521172 - Vo Nhat Phuong
 import React, { useState } from 'react';
-import { StyleSheet, View, StatusBar } from 'react-native';
+import { StyleSheet, View, StatusBar, ScrollView } from 'react-native';
 import MySwitch from './components/MySwitch';
 import Header from './components/Header';
 import Feedback from './components/Feedback';
@@ -29,11 +29,13 @@ export default function App() {
     return (
         <View style={styles.container}>
             <StatusBar barStyle={darkMode ? "light-content" : "dark-content"} />
-            <Header darkMode={darkMode} source={require("./assets/logo.png")} />
-            <MySwitch darkMode={darkMode} title='Dark Mode' funct={changeMode} value={darkMode} />
-            <MySwitch darkMode={darkMode} title='Notifications' funct={enableNotif} value={Notif} />
-            <Feedback darkMode={darkMode} notif={Notif} funct={addFeedback} />
-            <FeedbackList darkMode={darkMode} data={feedback} />
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <Header darkMode={darkMode} source={require("./assets/logo.png")} />
+                <MySwitch darkMode={darkMode} title='Dark Mode' funct={changeMode} value={darkMode} />
+                <MySwitch darkMode={darkMode} title='Notifications' funct={enableNotif} value={Notif} />
+                <Feedback darkMode={darkMode} notif={Notif} funct={addFeedback} />
+                <FeedbackList darkMode={darkMode} data={feedback} />
+            </ScrollView>
         </View>
     );
 }
