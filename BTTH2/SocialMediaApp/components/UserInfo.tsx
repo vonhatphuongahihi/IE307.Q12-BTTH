@@ -10,7 +10,7 @@ interface UserInfoProps {
 const UserInfo = ({ avatar, username }: UserInfoProps) => {
     return (
         <View style={styles.container}>
-            <Image source={avatar} style={styles.avatar} />
+            <Image source={avatar} style={styles.avatar} resizeMode="cover" />
             <Text style={styles.username}>{username}</Text>
         </View>
     );

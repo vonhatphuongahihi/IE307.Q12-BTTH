@@ -21,7 +21,6 @@ const PostList = () => {
             <Header title="Social Media Feed" />
 
             <ScrollView
-                // 22521172 - Võ Nhất Phương
                 style={styles.scrollView}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={styles.scrollContent}
@@ -37,7 +36,7 @@ const PostList = () => {
         </SafeAreaView>
     );
 };
-
+// 22521172 - Võ Nhất Phương
 const styles = StyleSheet.create({
     container: {
         flex: 1,

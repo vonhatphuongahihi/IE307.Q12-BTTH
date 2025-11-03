@@ -57,7 +57,7 @@ const PostCard = ({ post, onUpdatePost }: PostCardProps) => {
 
             <Text style={styles.content}>{post.content}</Text>
 
-            <Image source={post.image} style={styles.postImage} />
+            <Image source={post.image} style={styles.postImage} resizeMode="cover" />
 
             {/* 22521172 - Võ Nhất Phương */}
             <Stats likes={likeCount} comments={commentCount} shares={shareCount} />
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
         elevation: 5,
     },
+    /* 22521172 - Võ Nhất Phương */
     content: {
         fontSize: 14,
         color: '#333',
@@ -101,9 +102,7 @@ const styles = StyleSheet.create({
         height: 250,
         borderRadius: 8,
         marginBottom: 12,
-        resizeMode: 'cover',
     },
-    // 22521172 - Võ Nhất Phương
     separator: {
         height: 1,
         backgroundColor: '#e0e0e0',

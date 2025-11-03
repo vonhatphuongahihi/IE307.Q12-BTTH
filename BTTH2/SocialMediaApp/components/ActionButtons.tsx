@@ -24,7 +24,7 @@ const ActionButtons = ({ isLiked, onLike, onComment, onShare }: ActionButtonsPro
         onShare();
         Alert.alert("Share", "The post has been shared!");
     };
-
+    // 22521172 - Võ Nhất Phương
     return (
         <View style={styles.container}>
             <SingleActionButton
@@ -48,7 +48,7 @@ const ActionButtons = ({ isLiked, onLike, onComment, onShare }: ActionButtonsPro
         </View>
     );
 };
-
+// 22521172 - Võ Nhất Phương
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',

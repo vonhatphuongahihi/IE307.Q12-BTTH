@@ -25,6 +25,7 @@ const SingleActionButton = ({ icon, label, onPress, isActive = false }: SingleAc
     );
 };
 
+// 22521172 - Võ Nhất Phương
 const styles = StyleSheet.create({
     actionButton: {
         flex: 1,
