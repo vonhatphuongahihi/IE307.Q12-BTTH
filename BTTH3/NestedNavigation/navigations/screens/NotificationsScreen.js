@@ -18,6 +18,7 @@ function NotificationsScreen({ navigation }) {
 
 export default NotificationsScreen;
 
+// 22521172 - Vo Nhat Phuong
 const styles = StyleSheet.create({
     container: {
         flex: 1,

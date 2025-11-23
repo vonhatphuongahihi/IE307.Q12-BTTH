@@ -37,6 +37,7 @@ function CustomDrawerContent({ navigation, state }) {
                 <Text style={styles.drawerHeaderText}>Menu</Text>
             </View>
             <TouchableOpacity
+                // 22521172 - Vo Nhat Phuong
                 style={[
                     styles.drawerItem,
                     activeRoute === 'Home' && styles.drawerItemActive
@@ -74,6 +75,7 @@ function CustomDrawerContent({ navigation, state }) {
                     styles.drawerItemText,
                     activeRoute === 'Helps' && styles.drawerItemTextActive
                 ]}>Helps</Text>
+                {/* 22521172 - Vo Nhat Phuong */}
             </TouchableOpacity>
         </View>
     );
@@ -105,7 +107,7 @@ function MainDrawer() {
                     headerLeft: () => (
                         <TouchableOpacity
                             onPress={() => navigation.openDrawer()}
-                            style={{ marginLeft: 15 }}
+                            style={{ marginLeft: 15, marginRight: 15 }}
                         >
                             <Icon name='bars' size={24} color='#007AFF' />
                         </TouchableOpacity>

@@ -4,7 +4,6 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 function HomeScreen({ navigation }) {
   const navigateToDetails = () => {
-    // Navigate to HomeDetails in the parent Stack Navigator
     const parent = navigation.getParent();
     if (parent) {
       parent.navigate('HomeDetails');
@@ -26,6 +25,7 @@ function HomeScreen({ navigation }) {
 
 export default HomeScreen;
 
+// 22521172 - Vo Nhat Phuong
 const styles = StyleSheet.create({
   container: {
     flex: 1,

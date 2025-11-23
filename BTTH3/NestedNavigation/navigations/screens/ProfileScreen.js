@@ -21,6 +21,7 @@ function ProfileScreen() {
 
 export default ProfileScreen;
 
+// 22521172 - Vo Nhat Phuong
 const styles = StyleSheet.create({
   container: {
     flex: 1,

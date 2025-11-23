@@ -4,9 +4,7 @@ import Categories1Screen from './screens/Categories1Screen';
 import Categories2Screen from './screens/Categories2Screen';
 import Categories3Screen from './screens/Categories3Screen';
 // 22521172 - Vo Nhat Phuong
-
 const Tab = createMaterialTopTabNavigator();
-
 function CategoriesTopTabs() {
     return (
         <Tab.Navigator
@@ -40,6 +38,5 @@ function CategoriesTopTabs() {
         </Tab.Navigator>
     );
 }
-
 export default CategoriesTopTabs;
 

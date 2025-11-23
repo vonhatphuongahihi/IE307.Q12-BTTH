@@ -26,6 +26,7 @@ function NotificationsStack({ navigation }) {
                     ),
                 })}
             />
+            {/* 22521172 - Vo Nhat Phuong */}
             <Stack.Screen
                 name="NotificationDetails"
                 component={NotificationDetailsScreen}
