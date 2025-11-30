@@ -117,10 +117,10 @@ const HomeScreen = ({ navigation }) => {
                 </Text>
                 <TouchableOpacity
                     onPress={() => navigation.navigate('AddNote')}
-                    style={styles.addButton}
+                    style={[styles.addButton, { backgroundColor: darkMode ? '#007AFF' : '#FF6B35' }]}
                     activeOpacity={0.7}
                 >
-                    <Ionicons name="add" size={32} color="white" />
+                    <Ionicons name="add" size={32} color={darkMode ? '#000000' : 'white'} />
                 </TouchableOpacity>
             </View>
             {notes.length === 0 ? (
@@ -161,7 +161,7 @@ const lightTheme = {
 const darkTheme = {
     container: { backgroundColor: '#000000' },
     header: { backgroundColor: '#1a1a1a' },
-    headerTitle: { color: '#4ECDC4' },
+    headerTitle: { color: '#007AFF' },
     sectionTitle: { color: '#ffffff' },
     noteItem: { backgroundColor: '#1a1a1a', borderColor: '#333' },
     noteTitle: { color: '#ffffff' },
@@ -197,7 +197,6 @@ const styles = StyleSheet.create({
         width: 56,
         height: 56,
         borderRadius: 28,
-        backgroundColor: '#FF6B35',
         justifyContent: 'center',
         alignItems: 'center',
         elevation: 4,
